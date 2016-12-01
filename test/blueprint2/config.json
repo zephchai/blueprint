@@ -1,0 +1,5 @@
+{
+    "env": "MYTYPE",
+    "value": ["MYTYPE"],
+    "type": "myType"
+}

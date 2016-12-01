@@ -1,0 +1,21 @@
+################################################################################
+# README for ubw. Please read this document carefully to understand how to use
+# this repository
+################################################################################
+
+#### Golden Rules ####
+- ALL codes should be written in English
+- ALWAYS test your code before pushing it up to origin
+- If you are unsure whether your code will work in remote site, get the TD there
+  to test the code for you. Or use teamviewer to test it.
+- DO NOT hardcode any path or similar variables in your code
+- Use config file to provide site/project specific settings
+- Use .gitignore to exclude files that should not be checked into git
+- Copy the hooks\pre-commit hooks to your .git\hooks folder in your repository
+
+#### Git usage ####
+git add <file> - Add a new file that is not part of the repository
+git pull - Pull the files from origin to your repo. Run this to get updates
+git checkout <file> - Checkout a file for editing
+git commit <file> - Commit your changes into your repo. Think of this as save.
+git push - Push your commit up to the origin

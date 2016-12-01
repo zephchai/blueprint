@@ -1,0 +1,36 @@
+#! /usr/bin/env python
+
+import os
+import sys
+import argparse
+
+import template
+
+def get_args():
+    parser = argparse.ArgumentParser(description="Create folders for shot")
+    parser.add_argument("--seq", help="Sequence to create folder. Default to 
+        SEQ in the environment")
+    parser.add_argument("--shot", help="Shot to create folder. Default to 
+        SHOT in the environment")
+    parser.add_argument("-d", "--dept", help="Sequence to create folder. Default to 
+        DEPT in the environment")
+
+    return parser.parse_args()
+
+def main():
+    args = get_args()
+    show = os.environ("SHOW")
+    seq = os.environ("SEQ") or args.seq
+    shot = os.environ("SHOT") or args.shot
+    dept = os.environ("DEPT") or args.dept
+
+    #Make sure show, seq and shot
+    if not (show and seq and shot):
+        print("Please make sure you are in a show environment and you have
+            specify the seq and shot")
+        return
+
+    paths = template.getPathsToCreate()
+
+if __name__ == "__main__":
+    main()

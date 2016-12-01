@@ -1,0 +1,5 @@
+{
+    "env": "OTHERTYPEFOLDER",
+    "value": ["OTHERTYPEFOLDER"],
+    "type": "OtherTypeFolder"
+}
